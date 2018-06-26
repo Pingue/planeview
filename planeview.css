@@ -1,3 +1,117 @@
-.plane{
-    background-color: #ff0000;
+body {
+
+    font-family: sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+#canvas {
+    position: relative;
+    border: 1px solid black;
+    height: 80vh;
+    width: 95vw;
+
+    background: linear-gradient(to bottom, #05abe0 0%, #53cbf1 60%, #b0eafc 100%);
+
+    overflow: hidden;
+}
+
+.plane {
+
+    --border-radius: 8px;
+
+    --light-grey: rgb(220, 227, 230);
+    --dark-grey: rgb(80, 84, 87);
+    --accent-color: rgb(241, 198, 81);
+
+
+    position: absolute;
+
+    background-color: var(--light-grey);
+    width: 250px;
+
+    border-radius: var(--border-radius);
+
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+
+}
+
+.plane > div {
+    width: 100%;
+}
+
+.plane .number {
+    display: inline-block;
+    width: 50%;
+    padding: 8px;
+    background-color: var(--dark-grey);
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.4em;
+
+    border-top-left-radius: var(--border-radius);
+}
+
+.plane .operator {
+    display: inline-block;
+    width: 50%;
+    padding: 8px;
+    background-color: white;
+    font-size: 1.4em;
+
+
+    border-top-right-radius: var(--border-radius);
+}
+
+.plane .from, .plane .to {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    padding: 8px;
+}
+
+.plane .code {
+    font-weight: 700;
+    font-size: 1.4em;
+
+}
+
+.plane .icon {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    color: var(--accent-color);
+
+}
+
+
+.plane hr {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border: none;
+    margin: 0px;
+}
+
+.plane .aircraft {
+    padding: 8px;
+}
+
+.plane:before {
+    content: "";
+
+    position: absolute;
+    right: 50%;
+    top: -20px;
+
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;  /* left arrow slant */
+    border-right: 12px solid transparent; /* right arrow slant */
+    border-bottom: 20px solid var(--dark-grey); /* bottom, add background color here */
+    font-size: 0;
+    line-height: 0;
+
 }
